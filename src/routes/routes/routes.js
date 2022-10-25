@@ -4,6 +4,12 @@ import Main from "../../layout/Main";
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <Main></Main>
+        element: <Main></Main>,
+        children: [
+            {
+                path: "/",
+                element: <ssss></ssss>,
+            }
+        ]
     }
 ])
