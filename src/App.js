@@ -1,13 +1,13 @@
-import logo from './logo.svg';
-import { FaBeer } from 'react-icons/fa';
-import toast, { Toaster } from 'react-hot-toast';
+
 import './App.css';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './routes/routes/routes';
 
 function App() {
-  const notify = () => toast('Here is your toast.');
+
   return (
     <div className="App">
-
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
