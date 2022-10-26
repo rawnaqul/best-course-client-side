@@ -40,16 +40,16 @@ const Header = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
-                        <li><Link to="/home">Home</Link></li>
-                        <li><Link to="/courses">All Courses</Link></li>
-                        <li><Link to="/faq">FAQ</Link></li>
-                        <li><Link to="/blog">Blog</Link></li>
-                        <li tabIndex={0} className="">
+                        <li className='mx-1'><Link to="/home">Home</Link></li>
+                        <li className='mx-1'><Link to="/courses">All Courses</Link></li>
+                        <li className='mx-1'><Link to="/faq">FAQ</Link></li>
+                        <li className='mx-1'><Link to="/blog">Blog</Link></li>
+                        <li tabIndex={0} className="mx-1">
                             <Link className=''>
                                 Profile
                                 <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                             </Link>
-                            <ul className="p-2">
+                            <ul className={!user?.uid ? `p-2` : `hidden`}>
                                 <li><Link to="/login">Log In</Link></li>
                                 <li><Link to="/signup">Sign Up</Link></li>
                             </ul>
