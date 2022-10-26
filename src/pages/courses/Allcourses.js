@@ -1,8 +1,11 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 import Courses from './Courses';
 import Sidebar from './Sidebar';
 
 const Allcourses = () => {
+    const mycourses = useLoaderData();
+    console.log(mycourses.length);
     return (
         <div>
             <div className='grid grid-cols-4 gap-4'>
