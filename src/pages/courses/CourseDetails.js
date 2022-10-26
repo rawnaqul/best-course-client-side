@@ -6,12 +6,20 @@ import Sidebar from './Sidebar';
 const CourseDetails = () => {
     const courseInfo = useLoaderData();
 
-    const { name, price, edtails, image, duration } = courseInfo;
+    const { name, price, details, img, duration } = courseInfo;
 
     return (
         <div>
-            <p>{name}</p>
-            <p>{price}</p>
+            <div className="card lg:card-side bg-base-100 shadow-xl">
+                <figure><img src={img} alt="Album" /></figure>
+                <div className="card-body">
+                    <h1 className="card-title">{name}</h1>
+                    <p>{details}</p>
+                    <div className="card-actions justify-end">
+                        <button className="btn btn-primary">Purchase</button>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
