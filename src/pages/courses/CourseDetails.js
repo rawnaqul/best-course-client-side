@@ -9,12 +9,14 @@ const CourseDetails = () => {
     const { name, price, details, img, duration } = courseInfo;
 
     return (
-        <div>
-            <div className="card lg:card-side bg-base-100 shadow-xl">
+        <div className='rounded-md'>
+            <div className="card lg:card-side bg-base-100 shadow-xl rounded-md">
                 <figure><img src={img} alt="Album" /></figure>
                 <div className="card-body">
-                    <h1 className="card-title">{name}</h1>
-                    <p>{details}</p>
+                    <h1 className="card-title place-content-center text-3xl">{name}</h1>
+                    <p className='font-medium m-2'>{details}</p>
+                    <p className="text-sm p-0 m-0">Course Duration: {duration}</p>
+                    <p className="subpixel-antialiased">Course Price: {price}</p>
                     <div className="card-actions justify-end">
                         <button className="btn btn-primary">Purchase</button>
                     </div>

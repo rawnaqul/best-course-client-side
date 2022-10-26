@@ -6,12 +6,12 @@ import Sidebar from './Sidebar';
 const Allcourses = () => {
 
     return (
-        <div>
+        <div className='rounded-md p-2 mt-20'>
             <div className='grid grid-cols-4 gap-4'>
-                <div className='col-span-1 bg-white'>
+                <div className='col-span-1 bg-white rounded-md p-3 bg-inherit'>
                     <Sidebar></Sidebar>
                 </div>
-                <div className='col-span-3 bg-gray-50'>
+                <div className='col-span-3 bg-gray-50 rounded-md p-3 bg-inherit'>
                     <Outlet></Outlet>
 
                 </div>
