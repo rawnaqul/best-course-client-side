@@ -1,9 +1,13 @@
 import React from 'react';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const Sidebar = () => {
+    const courses = useLoaderData();
     return (
         <div>
-            <h2> side bar</h2>
+            {
+                courses.map(course => <Link><p></p></Link>)
+            }
         </div>
     );
 };

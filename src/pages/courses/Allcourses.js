@@ -10,7 +10,7 @@ const Allcourses = () => {
         <div>
             <div className='grid grid-cols-4 gap-4'>
                 <div className='col-span-1 bg-white'>
-                    <Sidebar></Sidebar>
+                    <Sidebar mycourses={mycourses}></Sidebar>
                 </div>
                 <div className='col-span-3 bg-gray-50'>
                     <Courses></Courses>
