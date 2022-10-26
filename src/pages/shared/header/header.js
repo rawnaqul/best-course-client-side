@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { FaUserAlt } from 'react-icons/fa';
+import { AuthContext } from '../../../contexts/authprovider/Authprovider';
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext);
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
     return (
         <div className=''>
             <div className="navbar bg-base-100">
@@ -56,7 +64,15 @@ const Header = () => {
                             <input type="checkbox" className="toggle toggle-xs" />
                         </label>
                     </div>
-                    <Link className="btn">Log Out</Link>
+                    <div className="w-10 rounded-full mr-3">
+                        {
+                            user?.photoURL ?
+                                <img src={user?.photoURL} className="rounded-full" alt='' />
+                                : <FaUserAlt />
+                        }
+                    </div>
+
+                    <Link className="btn"><button onClick={handleLogOut} className="btn btn-sm">Log Out</button></Link>
                 </div>
 
             </div>

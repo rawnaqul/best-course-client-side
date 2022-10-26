@@ -21,11 +21,12 @@ const Signup = () => {
                                 </label>
                                 <input type="text" placeholder="password" className="input input-bordered" />
                                 <label className="label">
-                                    <Link href="#" className="label-text-alt link link-hover">Forgot password?</Link>
+                                    <span className="label-text">Confirm Password</span>
                                 </label>
+                                <input type="text" placeholder="confirm-password" className="input input-bordered" />
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Login</button>
+                                <button className="btn btn-primary">Sign Up</button>
                             </div>
                         </div>
                     </div>
