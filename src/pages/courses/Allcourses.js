@@ -1,19 +1,19 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Outlet, useLoaderData } from 'react-router-dom';
 import Courses from './Courses';
 import Sidebar from './Sidebar';
 
 const Allcourses = () => {
-    const mycourses = useLoaderData();
-    console.log(mycourses.length);
+
     return (
         <div>
             <div className='grid grid-cols-4 gap-4'>
                 <div className='col-span-1 bg-white'>
-                    <Sidebar mycourses={mycourses}></Sidebar>
+                    <Sidebar></Sidebar>
                 </div>
                 <div className='col-span-3 bg-gray-50'>
-                    <Courses></Courses>
+                    <Outlet></Outlet>
+
                 </div>
             </div>
         </div>

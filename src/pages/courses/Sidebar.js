@@ -6,7 +6,7 @@ const Sidebar = () => {
     return (
         <div>
             {
-                courses.map(course => <Link><p></p></Link>)
+                courses.map(course => <Link to={`/courses/${course.id}`} key={course.id}><p>{course.name}</p></Link>)
             }
         </div>
     );

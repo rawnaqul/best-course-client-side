@@ -1,9 +1,17 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import Courses from './Courses';
+import Sidebar from './Sidebar';
 
 const CourseDetails = () => {
+    const courseInfo = useLoaderData();
+
+    const { name, price, edtails, image, duration } = courseInfo;
+
     return (
         <div>
-            details about courses
+            <p>{name}</p>
+            <p>{price}</p>
         </div>
     );
 };
