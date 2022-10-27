@@ -9,6 +9,8 @@ import Signup from "../../pages/signup/Signup";
 import Sidebar from "../../pages/courses/Sidebar";
 import CourseDetails from "../../pages/courses/CourseDetails";
 import Courses from "../../pages/courses/Courses";
+import Checkout from "../../pages/checkout/Checkout";
+import PrivateRoutes from "../privateRoutes/PrivateRoutes";
 
 export const router = createBrowserRouter([
     {
@@ -59,6 +61,15 @@ export const router = createBrowserRouter([
             {
                 path: "/signup",
                 element: <Signup></Signup>,
+            },
+            {
+                path: "/checkout/:id",
+                loader: async ({ params }) => {
+                    return fetch(`http://localhost:5000/mycourses/${params.id}`)
+                },
+                element: <PrivateRoutes>
+                    <Checkout></Checkout>
+                </PrivateRoutes>,
             },
         ]
     }

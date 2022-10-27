@@ -11,7 +11,7 @@ const Allcourses = () => {
                 <div className='col-span-1 bg-white rounded-md p-3 bg-inherit'>
                     <Sidebar></Sidebar>
                 </div>
-                <div className='col-span-3 bg-gray-50 rounded-md p-3 bg-inherit'>
+                <div className='col-span-3 bg-gray-50 rounded-md p-3 bg-gray-800'>
                     <Outlet></Outlet>
 
                 </div>
