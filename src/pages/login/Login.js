@@ -10,6 +10,10 @@ const Login = () => {
     const { providerLogin } = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider()
 
+    const handleLoginSubmit = e => {
+        e.preventDefault();
+    }
+
     const handleGoogleSignIn = () => {
         providerLogin(googleProvider)
             .then(result => {
@@ -42,7 +46,7 @@ const Login = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Login</button>
+                                <button onClick={handleLoginSubmit} className="btn btn-primary">Login</button>
                             </div>
                             <div>Or</div>
                             <div className="form-control mt-2">

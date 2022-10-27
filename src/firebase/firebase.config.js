@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBnLWaS_J4U65hM4dD5tnynuH9E-AkcBe8",
-    authDomain: "sera-course-client.firebaseapp.com",
-    projectId: "sera-course-client",
-    storageBucket: "sera-course-client.appspot.com",
-    messagingSenderId: "989182336235",
-    appId: "1:989182336235:web:e5b47be0c0048dec3932ae"
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId
 };
 
 // Initialize Firebase

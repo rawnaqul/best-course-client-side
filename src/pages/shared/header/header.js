@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FaUserAlt } from 'react-icons/fa';
 import { AuthContext } from '../../../contexts/authprovider/Authprovider';
+import ReactTooltip from 'react-tooltip';
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -67,7 +68,7 @@ const Header = () => {
                     <div className="w-10 rounded-full mr-3">
                         {
                             user?.photoURL ?
-                                <img src={user?.photoURL} className="rounded-full" alt='' />
+                                <img data-tip={user?.displayName} src={user?.photoURL} className="rounded-full" alt='' />
                                 : <FaUserAlt />
                         }
                     </div>
@@ -76,6 +77,7 @@ const Header = () => {
                 </div>
 
             </div>
+            <ReactTooltip />
         </div>
     );
 };
