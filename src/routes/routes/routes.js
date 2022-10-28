@@ -71,6 +71,10 @@ export const router = createBrowserRouter([
                     <Checkout></Checkout>
                 </PrivateRoutes>,
             },
+            {
+                path: '*',
+                element: <div>404: You've come to wrong place mate!</div>
+            }
         ]
     }
 ])
