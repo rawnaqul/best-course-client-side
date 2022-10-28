@@ -47,6 +47,13 @@ const Login = () => {
 
     const handleGitHubSignIn = () => {
         providerLogin(gitHubProvider)
+            .then(result => {
+                navigate(from, { replace: true })
+            })
+            .catch(error => {
+                console.error(error)
+                setError(error.message)
+            })
     }
 
     return (
