@@ -72,6 +72,11 @@ const Login = () => {
                                         <Link href="#" className="label-text-alt link link-hover">Forgot password?</Link>
                                     </label>
                                 </div>
+                                {
+                                    error && <div className='text-red-600'>
+                                        <p>{error}</p>
+                                    </div>
+                                }
                                 <div className="form-control mt-6">
                                     <button className="btn btn-primary">Login</button>
                                 </div>

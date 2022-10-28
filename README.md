@@ -1,3 +1,16 @@
+# Live Site Link- 
+https://sera-course-client.web.app/
+
+## Description
+This is a code learning website.
+ 
+### Hosting 
+This website is hosted in firebase.
+ 
+#### Framework
+ReactJS, Tailwind, DaisyUi were used to build this awesome site. 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

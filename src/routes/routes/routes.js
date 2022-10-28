@@ -73,7 +73,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '*',
-                element: <div>404: You've come to wrong place mate!</div>
+                element: <div className="text-8xl mt-10 text-red-700">404: You've come to wrong place mate!</div>
             }
         ]
     }

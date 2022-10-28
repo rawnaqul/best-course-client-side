@@ -45,11 +45,11 @@ const Signup = () => {
                                     <label className="label">
                                         <span className="label-text">Full Name</span>
                                     </label>
-                                    <input type="text" placeholder="Type your full name here" className="input input-bordered" />
+                                    <input type="text" name='name' placeholder="Type your full name here" className="input input-bordered" required />
                                     <label className="label">
                                         <span className="label-text">Email</span>
                                     </label>
-                                    <input type="text" placeholder="email" className="input input-bordered" />
+                                    <input type="email" name="email" placeholder="email" className="input input-bordered" required />
                                     <label className="label">
                                         <span className="label-text">Photo</span>
                                     </label>
@@ -59,7 +59,7 @@ const Signup = () => {
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="text" placeholder="password" className="input input-bordered" />
+                                    <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                                 </div>
                                 <div className="form-control mt-6">
                                     <button className="btn btn-primary">Sign Up</button>
