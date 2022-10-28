@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaUserAlt } from 'react-icons/fa';
 import { AuthContext } from '../../../contexts/authprovider/Authprovider';
 import ReactTooltip from 'react-tooltip';
+import { useState } from 'react';
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -11,6 +12,15 @@ const Header = () => {
             .then(() => { })
             .catch(error => console.error(error))
     }
+
+    const [toggleButton, setToggleButton] = useState();
+
+    const toggleChange = event => {
+        const toggleButton = event.target.checked;
+        setToggleButton(toggleButton)
+    }
+
+
     return (
         <div className=''>
             <div className="navbar bg-base-100">
@@ -37,7 +47,8 @@ const Header = () => {
                             <li><Link>Item 3</Link></li>
                         </ul>
                     </div>
-                    <Link className="btn btn-ghost normal-case text-xl"><span className='text-lime-600'>SERA</span>Course</Link>
+                    <Link to="/home" className="btn btn-ghost normal-case text-xl"><img src='https://i.postimg.cc/V6gTpzt4/python-1.png'></img></Link>
+                    <Link to="/home" className="btn btn-ghost normal-case text-xl"><span className='text-lime-600'>SERA</span>Course</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
@@ -61,9 +72,14 @@ const Header = () => {
                 <div className="navbar-end">
                     <div className="form-control mr-3">
                         <label className="label cursor-pointer">
-                            <span className="label-text text-xs mr-3 opacity-25">Dark Mode</span>
-                            <input type="checkbox" className="toggle toggle-xs" />
+                            <span className="label-text text-sm mr-3 opacity-40 sm:ghost">
+                                {
+                                    toggleButton ? 'Dark' : 'Light'
+                                }
+                            </span>
+                            <input onChange={toggleChange} type="checkbox" className="toggle toggle-primary" />
                         </label>
+
                     </div>
                     <div className="w-10 rounded-full mr-3">
                         {
@@ -73,7 +89,7 @@ const Header = () => {
                         }
                     </div>
 
-                    <Link className="btn"><button onClick={handleLogOut} className="btn btn-sm">Log Out</button></Link>
+                    <Link className={user?.uid ? `p-2 btn` : `hidden`}><button onClick={handleLogOut} className="btn btn-sm">Log Out</button></Link>
                 </div>
 
             </div>
