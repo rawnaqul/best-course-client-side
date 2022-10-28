@@ -32,21 +32,21 @@ export const router = createBrowserRouter([
             {
                 path: "/courses",
                 loader: async () => {
-                    return fetch('http://localhost:5000/mycourses')
+                    return fetch('https://sera-course-server.vercel.app/mycourses')
                 },
                 element: <Allcourses></Allcourses>,
                 children: ([
                     {
                         path: "/courses",
                         loader: async () => {
-                            return fetch('http://localhost:5000/mycourses')
+                            return fetch('https://sera-course-server.vercel.app/mycourses')
                         },
                         element: <Courses></Courses>
                     },
                     {
                         path: '/courses/:id',
                         loader: async ({ params }) => {
-                            return fetch(`http://localhost:5000/mycourses/${params.id}`)
+                            return fetch(`https://sera-course-server.vercel.app/mycourses/${params.id}`)
                         },
                         element: <CourseDetails></CourseDetails>
                     },
@@ -65,7 +65,7 @@ export const router = createBrowserRouter([
             {
                 path: "/checkout/:id",
                 loader: async ({ params }) => {
-                    return fetch(`http://localhost:5000/mycourses/${params.id}`)
+                    return fetch(`https://sera-course-server.vercel.app/mycourses/${params.id}`)
                 },
                 element: <PrivateRoutes>
                     <Checkout></Checkout>

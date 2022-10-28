@@ -21,7 +21,7 @@ const CourseDetails = () => {
                         <h1 className="card-title place-content-center text-3xl">{name}</h1>
                     </div>
                     <p className='font-medium m-2'>{details}</p>
-                    <text>Created By: Sir. <a className='underline hover:decoration-dashed text-lime-600'>{mentor}</a></text>
+                    <p>Created By: Sir. <Link className='underline hover:decoration-dashed text-lime-600'>{mentor}</Link></p>
                     <p className="text-sm p-0 m-0">Course Duration: {duration}</p>
                     <p className="subpixel-antialiased">Course Price: {price}</p>
                     <div className="card-actions justify-end">
@@ -30,7 +30,7 @@ const CourseDetails = () => {
                 </div>
             </div>
             <div className='my-3'>
-                <p>Download details about this course here</p>
+                <p>Download details about this course</p>
                 <ReactPrint trigger={() => <button className="btn btn-outline btn-accent btn-xs mt-3">DOWNLOAD PDF</button>} content={() => ref.current} />
             </div>
         </div>
